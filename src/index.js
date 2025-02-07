@@ -8,10 +8,10 @@ import ViewCountry from './components/ViewCountry/ViewCountry';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename='/react-countries-app' >
         <Routes>
             <Route path='/' element={<App />} />
-            <Route path='/country' element={<ViewCountry/>} />
+            <Route path='/country' element={<ViewCountry/>}/>
         </Routes>
     </BrowserRouter>
 );
