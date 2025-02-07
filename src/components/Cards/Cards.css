@@ -1,0 +1,151 @@
+.card{
+    display: flex;flex-direction: column; gap: 10px;
+    justify-items: center; align-items: center;
+    width: 90vw; text-align: left;
+    margin: 8px auto;
+}
+.card .back_btn{
+    text-decoration-line: none; color: black; 
+    border-bottom: 1px solid black;
+    padding: 1px 2px; margin: 0 2px;
+}
+.card .wrapper{
+    text-align: left;
+    width: 100%; padding: 0 16px;
+    order: 1;
+}
+.card figure{
+    order: 2;
+}
+.card figure img {
+    display: block;
+    width: 100%; margin: 0 auto;
+    border: 1px solid #fff;
+    box-shadow: 0 3px 1px #fff;
+}
+.card figure figcaption{
+    text-transform: capitalize; text-align: center;
+    font-size: large; font-weight: bold;
+    animation: figcaption_animation 2s ease forwards;
+    overflow: hidden;
+}
+@keyframes figcaption_animation {
+    0%{
+        width: 20%;
+        opacity: 0;
+    }100%{
+        width: 100%;
+        opacity: 1;
+    }
+}
+.card article{
+    padding: 8px 16px;
+    order: 3;
+}
+.card h1,.card  h2,.card  h3{
+    text-transform: uppercase;
+    font-size: large;
+}
+.card h3{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.774);
+}
+.card h1{
+    display: none;
+}
+
+.card article > * {
+    animation: text_animation 1s ease forwards;
+    opacity: 0;
+}
+
+.card article > *:nth-child(1) {
+    animation-delay: 0ms;
+}
+.card article > *:nth-child(2) {
+    animation-delay: 100ms;
+}
+.card article > *:nth-child(3) {
+    animation-delay: 200ms;
+}
+.card article > *:nth-child(4) {
+    animation-delay: 300ms;
+}
+.card article > *:nth-child(5) {
+    animation-delay: 400ms;
+}
+.card article > *:nth-child(6) {
+    animation-delay: 500ms;
+}
+.card article > *:nth-child(7) {
+    animation-delay: 600ms;
+}
+.card article > *:nth-child(8) {
+    animation-delay: 700ms;
+}
+.card article > *:nth-child(9) {
+    animation-delay: 800ms;
+}
+.card article > *:nth-child(10) {
+    animation-delay: 900ms;
+}
+.card .back_btn:active{
+    background-color: #c7522a;
+    color: #fff; border: 1px solid black;
+}
+@keyframes text_animation {
+    0%{
+        opacity: 0.1; transform: translateX(-100%);
+    }100%{
+        opacity: 1; transform: translateX(0);
+    }
+}
+
+.card figure img{
+    animation: flag_animation 4s ease forwards;
+    opacity: 0;
+}
+@keyframes flag_animation {
+    0%{
+        opacity: 0.1;
+    }100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width : 720px) {
+    .card{
+        display: grid; gap: 20px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows:5vh 90vh;
+        justify-content: center; align-items: center;
+        justify-items: center; align-items: center;
+        width: 80vw; 
+    }
+    .card .wrapper{
+        justify-self: left;
+        grid-column: span 2;
+    }
+    .card figure img {
+        min-height: calc(80vh - 20px);
+    }
+    .card figure{
+        grid-column: 2/3;
+    }
+    .card article{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .card h1{
+        display: block;
+    }
+    .card h1,.card  h2,.card  h3{
+        text-transform: uppercase;
+        font-size: large;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.774);
+    }
+    .card .back_btn:hover{
+        border: none; color: #fff;
+        border: 1px solid #008585;
+        background-color: #c7522a;
+    }
+}

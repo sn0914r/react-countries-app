@@ -1,0 +1,25 @@
+.github{
+    position: fixed; bottom: 0; right: 0;
+    margin: 4px 8px; padding: 2px 8px;
+    background-color: #008585;
+    opacity: 0.5; 
+    transition: all 200ms;
+}
+.github a{
+    text-decoration: none;
+    color: #fff; font-size: medium;
+}
+.github:active>a, .github:active {
+    background-color: #c7522a;
+    color: #fbf2c4; opacity: 1;
+}
+.github:active{
+    box-shadow: 1px 2px 1px #008585 ;
+}
+@media screen and (min-width : 720px){
+    .github:hover{
+        background-color: #c7522a;
+        box-shadow: -1px 2px 1px #008585;
+        opacity: 1;
+    }
+}

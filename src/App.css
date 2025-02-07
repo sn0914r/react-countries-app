@@ -1,0 +1,23 @@
+main .search_bar_section{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.449);
+  height: 10vh; margin: 1vh;
+  position: relative;
+}
+main .search_bar_section input{
+  width: 80%;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 8px;
+  border-radius: 10px; border: 1px solid black;
+}
+main .search_bar_section input:focus{
+  outline: none;
+  box-shadow: 0 1px 1px #74a892;
+  border: 0;
+}
+@media screen and (min-width : 720px){
+  main .search_bar_section input{
+    width: 50%;
+    height: 5vh;
+  }
+}
